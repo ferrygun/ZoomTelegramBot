@@ -26,7 +26,6 @@ var opts = {
             }]
         ]
     }
-
 };
 
 var opts1 = {
@@ -38,7 +37,6 @@ var opts1 = {
             }]
         ]
     }
-
 };
 
 var result = "";
@@ -68,7 +66,7 @@ async function screenOnOff(input) {
             "User-Agent": "Zoom-api-Jwt-Request",
             "content-type": "application/json"
         },
-        json: true //Parse the JSON string in the response
+        json: true 
     };
 
     try {
@@ -103,7 +101,7 @@ async function StartZoomMeeting(bot, flag) {
             "User-Agent": "Zoom-api-Jwt-Request",
             "content-type": "application/json"
         },
-        json: true //Parse the JSON string in the response
+        json: true 
     };
 
     try {
@@ -176,7 +174,6 @@ bot.on("callback_query", async function(data) {
         if (flag === 0) {
             console.log("here you go - initiate call");
             flag = 1;
-
             StartZoomMeeting(bot, 1);
         } else {
             console.log('error: can\'t initiate call');
@@ -194,7 +191,6 @@ bot.on('message', (msg) => {
   // 'msg' is the received Message from Telegram
   // 'match' is the result of executing the regexp above on the text content
   // of the message
-
   const chatId = msg.chat.id;
 
   // send back the matched "whatever" to the chat
@@ -215,9 +211,7 @@ async function UpdateZoomMeeting(meetingID) {
         auth: {
             bearer: token
         },
-        //** 
-
-        json: true //Parse the JSON string in the response
+        json: true
     };
 
     try {
