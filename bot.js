@@ -1,13 +1,10 @@
 const TelegramBot = require('node-telegram-bot-api');
 
-// Create a bot that uses 'polling' to fetch new updates
 const bottoken = 'YOUR_TELEGRAM_BOT_TOKEN';
 const botid = 'YOUR_TELEGRAM_BOT_ID';
 const email = 'YOUR_EMAIL_ADDRESS'
-
 const APIKey = 'YOUR_ZOOM_JWT_API_KEY';
 const APISecret = 'YOUR_ZOOM_JWT_API_SECRET';
-
 
 const bot = new TelegramBot(bottoken, {
     polling: true
